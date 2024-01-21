@@ -6,7 +6,7 @@
 #    By: mikegonz <mikegonz@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/16 14:47:05 by mikegonz          #+#    #+#              #
-#    Updated: 2024/01/02 17:40:33 by mikegonz         ###   ########.fr        #
+#    Updated: 2024/01/21 20:52:11 by mikegonz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,15 +47,15 @@ files = ft_isalnum \
 			ft_putnbr_fd \
 			ft_split \
 
-bonus = ft_lstadd_back \
-			ft_lstadd_front \
-			ft_lstclear \
-			ft_lstdelone \
-			ft_lstiter \
-			ft_lstlast \
-			ft_lstmap \
-			ft_lstnew \
-			ft_lstsize \
+bonus = ft_lstadd_back_bonus \
+			ft_lstadd_front_bonus \
+			ft_lstclear_bonus \
+			ft_lstdelone_bonus \
+			ft_lstiter_bonus \
+			ft_lstlast_bonus \
+			ft_lstmap_bonus \
+			ft_lstnew_bonus \
+			ft_lstsize_bonus \
 
 OFILES = $(files:%=%.o)
 BONUSFILES = $(bonus:%=%.o)
@@ -68,8 +68,8 @@ $(NAME): $(OFILES)
 
 all: $(NAME)
 
-bonus: $(BONUSFILES)
-	ar rcs $(NAME) $? 
+bonus: $(OFILES) $(BONUSFILES)
+	ar rcs $(NAME) $? $?
 
 clean:
 	@rm -rf $(OFILES) $(BONUSFILES)
