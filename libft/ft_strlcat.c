@@ -6,7 +6,7 @@
 /*   By: mikegonz <mikegonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 00:44:35 by mikegonz          #+#    #+#             */
-/*   Updated: 2023/12/30 21:51:54 by mikegonz         ###   ########.fr       */
+/*   Updated: 2024/01/21 19:20:25 by mikegonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ size_t	ft_strlcat(char *dest, char *src, unsigned int size)
 	counter = 0;
 	counter_src = 0;
 	counter_dest = 0;
+	if (size == 0)
+		return (0);
 	while (dest[counter_dest])
 		counter_dest++;
 	while (src[counter_src])

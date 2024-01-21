@@ -6,7 +6,7 @@
 /*   By: mikegonz <mikegonz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/25 15:39:16 by mikegonz          #+#    #+#             */
-/*   Updated: 2023/12/25 15:55:52 by mikegonz         ###   ########.fr       */
+/*   Updated: 2024/01/21 19:33:53 by mikegonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 	index = 0;
 	len = 0;
+	if (!s || !f)
+		return ;
 	while (s[len] != '\0')
 		len++;
 	while (index < len)

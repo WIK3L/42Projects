@@ -1,0 +1,22 @@
+# Ignorar archivos temporales
+*~
+
+# Ignorar archivos de respaldo de Visual Studio Code
+.vscode/
+.git/
+
+# Ignorar archivos compilados
+*.o
+*.out
+*.a
+
+# Ignorar directorios generados por el compilador
+/build/
+/bin/
+
+# ignora testers
+
+libft-war-machine
+
+
+
